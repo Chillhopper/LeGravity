@@ -3,6 +3,18 @@
 #include <QKeyEvent>
 #include <QGraphicsScene>
 #include "Bullet.h"
+#include "Enemy.h"
+
+MyRect::MyRect(){
+
+    QPixmap originalPixmap(":/Images/player.png");
+    int scaledWidth = 100; // Set the new width
+    int scaledHeight = 100; // Set the new height
+    QPixmap scaledPixmap = originalPixmap.scaled(scaledWidth, scaledHeight);
+    setPixmap(QPixmap(scaledPixmap));
+
+    setPos(100, 200);
+}
 
 void MyRect::keyPressEvent(QKeyEvent *event){
 
@@ -18,7 +30,13 @@ void MyRect::keyPressEvent(QKeyEvent *event){
     }else if(event->key() == Qt::Key_Space){
         Bullet* bullet = new Bullet();
         qDebug() << "Bullet created";
-        bullet->setPos(x()+45, y());
+        bullet->setPos(x(), y());
         scene()->addItem(bullet);
     }
+
+}
+
+void MyRect::spawn(){
+    Enemy* spawnEnemy = new Enemy();
+    scene()->addItem(spawnEnemy);
 }

@@ -28,6 +28,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Bullet.h Bullet.cpp
         Enemy.h
         Enemy.cpp
+        assets.qrc
+        Game.h
+        Game.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET LeGravity APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
