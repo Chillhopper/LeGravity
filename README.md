@@ -34,7 +34,7 @@ After the build is complete, run the executable created in the bin directory.
 
 ## Controls
 
-- **Arrow keys**: Move the spaceship.
+- **WASD controls**: Move the spaceship.
 - **Spacebar**: Fire bullets.
 
 ## Development
